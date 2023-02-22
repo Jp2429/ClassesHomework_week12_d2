@@ -9,7 +9,9 @@ public class Library {
         this.books=new ArrayList<Book>();
     }
     public void addBook(Book newBook){
-        this.books.add(newBook);
+        if(checkCapacity()){
+            this.books.add(newBook);
+        }
     }
 
     public int getBookCount() {
